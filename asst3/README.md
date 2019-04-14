@@ -1,0 +1,7 @@
+# Homework 3 - Printing Neatly
+
+Suppose we want to print a paragraph neatly on a page. The paragraph consists of words of length *l*1, *l*2,...,*l*n. The maximum line length is *M*. (Assume *l*i<=*M* always.) We define a measure of neatness as follows. The extra space on a line (using one space between words) containing words *l*i through *l*j is *M* - j + i - sum(*l*k). The penalty is the sum over all lines except the last of the cube of the extra space at the end of the line. This has been proven to be an effective heuristic for neatness in practice. Find a dynamic programming algorithm to determine the neatest way to print a paragraph. Provide a recursive definition of the value of the optimal solution that motivates the algorithm.
+
+Code up the algorithm in python to print an optimal division of words into lines. Call the program `neatness.py`. The output should be the text split into lines appropriately, and the numerical value of the penalty. Assume that a word in this context is any contiguous sequence of characters not including blank spaces.
+
+After coding the algorithm, download the text file containing a review of the Season 1 Buffy DVD posted at http://people.cs.georgetown.edu/jthaler/BuffyReview.txt, which was apparently written by Ryan Crackell for the Apollo Guide. Determine the minimal penalty for nearly printing the review, for the cases where *M* = 40 and *M* = 72.
